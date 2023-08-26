@@ -15,6 +15,14 @@ WORKING DIRECTORY (git add file name)-> STAGGING AREA(git commit (batch files) )
 
 git status  -> gives summary of tracked and untracked files.
 
-git init my_repo -> creates local repository
+git init my_repo or git init -> creates local repository
 
 git remote add origin <https> -> linking local repository to remote repositiy
+
+git push --set-upstreams origin branch name 
+
+pull request will go to the master.
+
+then it will merged
+
+
