@@ -23,6 +23,6 @@ git push --set-upstreams origin branch name
 
 pull request will go to the master.
 
-then it will merged
+then it will merged.
 
 
