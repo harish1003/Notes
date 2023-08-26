@@ -25,4 +25,5 @@ pull request will go to the master.
 
 then it will merged>
 
+git init, git clone, cd internall, git checkout -b "ADF1", change some file, git gui (commit), git push, create pull request, accept, and delete the branch
 
