@@ -1,0 +1,20 @@
+Git :
+
+git clone <https> -> will clone from remote repo
+git checkout <branch name> -> moved to new branch
+git gui -> select and commit 
+git push -> changes moved to branch 
+create the merge request to send this messages into the master. 
+
+Take backup od code before checkout.
+
+git branch -d branchname
+git checkout -b "branch name"
+
+WORKING DIRECTORY (git add file name)-> STAGGING AREA(git commit (batch files) ) -> LOCAL REPO (git push)-> REMOTE REP ->(merge request) master.
+
+git status  -> gives summary of tracked and untracked files.
+
+git init my_repo -> creates local repository
+
+git remote add origin <https> -> linking local repository to remote repositiy
