@@ -1,3 +1,6 @@
+https://github.com/bharaththippireddy/kafkaforjavadevelopers/tree/main
+
+
 Steps for running kafka.
 1. Install kafaka latest one, and add path to system env var --> upto this path ex : ../..bin/windows (so we can run windows batch file directly from CMD).
 C:\kafka_2.13-3.5.1\bin\windows\zookeeper-server-start C:\kafka_2.13-3.5.1\config\zookeeper.properties
