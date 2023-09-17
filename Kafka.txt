@@ -1,0 +1,56 @@
+Steps for running kafka.
+1. Install kafaka latest one, and add path to system env var --> upto this path ex : ../..bin/windows (so we can run windows batch file directly from CMD).
+C:\kafka_2.13-3.5.1\bin\windows\zookeeper-server-start C:\kafka_2.13-3.5.1\config\zookeeper.properties
+C:\kafka_2.13-3.5.1\bin\windows\kafka-server-start C:\kafka_2.13-3.5.1\config\server.properties
+Run 
+start the zookeeper first : 
+1. zookeeper-server-start D:\Softwares\kafka_2.13-3.5.1\config\zookeeper.properties
+start the kafka then
+2. kafka-server-start D:\Softwares\kafka_2.13-3.5.1\config\server.properties
+
+To know the Topics registered in kafka server.
+C:\Windows\System32>kafka-topics --list --bootstrap-server localhost:9092
+Accounts
+
+To create a topic in server 
+C:\Windows\System32>kafka-topics --create --replication-factor 1 --partitions 1 --topic Accounts --bootstrap-server localhost:9092
+Created topic Accounts.
+
+To Know details about Topic 
+C:\Windows\System32>kafka-topics --describe --topic Accounts --bootstrap-server localhost:9092
+Topic: Accounts TopicId: Dy916-AYQCKYFYgetfTiVQ PartitionCount: 1       ReplicationFactor: 1    Configs:
+        Topic: Accounts Partition: 0    Leader: 0       Replicas: 0     Isr: 0
+
+To produce on topic
+
+C:\Windows\System32>kafka-console-producer --bootstrap-server localhost:9092 --topic Accounts
+>Hi4
+>10034568
+>56
+>^C
+
+To consume on same topic
+C:\Windows\System32>kafka-console-consumer --topic Accounts --bootstrap-server localhost:9092
+Hi4
+10034568
+56
+Processed a total of 3 messages
+Terminate batch job (Y/N)? Y
+
+
+To produce a same topic on multiple brokers
+kafka-console-producer --broker-list --bootstrap-server localhost:9092,broker2:9092,broker3:9092 --topic Accounts
+
+Delete a Topic 
+kafka-topics --delete --bootstrap-server localhost:9092 --topic Accounts 
+
+
+
+--------------------------------------------------------------
+we have 5 API's
+1. Admin Api -- To display info of topics, brokers etc. Kafka drop uses this api to display.
+2. Producer Api -- produces data to broker
+3. Consumer Api -- consumes data from broker
+4. Streams Api -- produces on 1 topic -> perform anayltics -> produce to other topic
+5. Connect Api --used for db connection and push and pull
+
